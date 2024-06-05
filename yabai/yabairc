@@ -27,5 +27,6 @@ yabai -m config window_shadow float
 
 # Excluded apps
 
+yabai -m rule --add app="^Finder$" manage=off
 yabai -m rule --add app="^Системные настройки$" manage=off
 yabai -m rule --add app="^Калькулятор$" manage=off

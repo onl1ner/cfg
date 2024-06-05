@@ -1,0 +1,19 @@
+import = ["~/.config/alacritty/themes/aura-theme.toml"]
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+padding.x = 16
+padding.y = 16
+
+decorations = "Buttonless"
+
+opacity = 0.8
+blur = true
+
+option_as_alt = "Both"
+
+[font]
+normal.family = "GeistMono Nerd Font"
+size = 14
