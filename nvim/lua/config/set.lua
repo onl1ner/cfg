@@ -18,6 +18,7 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
 vim.opt.wrap = false
+vim.opt.autoindent = true
 
 vim.opt.tw = 100
 vim.opt.colorcolumn = "100" 

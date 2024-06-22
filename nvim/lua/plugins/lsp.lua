@@ -7,21 +7,36 @@ return {
 	},
 	config = function()
 		local lspconfig = require("lspconfig")
-		local util = require("lspconfig.util")
-		local cmp_nvim_lsp = require("cmp_nvim_lsp")
-		local capabilities = cmp_nvim_lsp.default_capabilities()
-		local opts = { noremap = true, silent = true }
-		local on_attach = function(_, bufnr)
-			opts.buffer = bufnr
 
-			vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts)
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+        local capabilities = require("cmp_nvim_lsp").default_capabilities()
+        local on_attach = function(_, bufnr)
+            local opts = {
+                noremap = true,
+                silent = true,
+                buffer = bufnr
+            }
+
+            vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts)
+            vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+            vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
             vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-		end
+        end
 
-		lspconfig["sourcekit"].setup({
+		lspconfig.sourcekit.setup {
 			capabilities = capabilities,
-			on_attach = on_attach,
-		})
+            on_attach = on_attach
+		}
+
+        lspconfig.gopls.setup {
+            capabilities = capabilities,
+            on_attach = on_attach,
+            cmd = { "gopls" }, 
+            filetypes = { "go", "gomod", "gowork", "gotmpl" },
+            settings = {
+                gopls = {
+                    completeUnimported = true
+                },
+            }
+        }
 	end,
 }
