@@ -8,6 +8,6 @@ return {
             },
         }
 
-        vim.keymap.set("n", "<leader>ee", "<cmd>Oil<cr>")
+        vim.keymap.set("n", "<leader>e", "<cmd>Oil<cr>")
     end
 }

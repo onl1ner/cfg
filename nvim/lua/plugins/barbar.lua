@@ -4,6 +4,7 @@ return {
         vim.keymap.set('n', '<leader>tl', '<Cmd>BufferNext<CR>', {})
         vim.keymap.set('n', '<leader>th', '<Cmd>BufferPrevious<CR>', {})
         vim.keymap.set('n', '<leader>tx', '<Cmd>BufferClose<CR>', {})
+        vim.keymap.set('n', '<leader>txa', '<Cmd>BufferCloseAllButCurrent<CR>', {})
     end,
     version = '^1.0.0'
 }

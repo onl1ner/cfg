@@ -10,6 +10,7 @@ return {
 
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
         local on_attach = function(_, bufnr)
+            local keymap = vim.keymap
             local opts = {
                 noremap = true,
                 silent = true,
