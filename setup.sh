@@ -6,9 +6,9 @@ brew install xcbeautify xcode-build-server
 
 mkdir -p ~/.config
 
-cp -R alacritty ~/.config
-cp -R nvim ~/.config
+cp -R -f alacritty ~/.config
+cp -R -f nvim ~/.config
 
-cp zsh/.zshrc ~/.zshrc && cp zsh/.p10k.zsh ~/.p10k.zsh
+cp zsh/.zshrc ~/.zshrc
 
-cp -R yabai ~/.config && cp -R skhd ~/.config
+cp -R -f yabai ~/.config && cp -R -f skhd ~/.config
