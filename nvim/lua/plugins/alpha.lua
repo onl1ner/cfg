@@ -108,7 +108,7 @@ return {
             val = {
                 dashboard.button("c",  "  > New File", "<cmd>new<CR>"),
                 dashboard.button("ff", "  > Recent Files", "<cmd>Telescope oldfiles<CR>"),
-                dashboard.button("fp", "󰉕  > Recent Projects", "<cmd>Telescope projects<CR>"),
+                dashboard.button("fp", "󰉕  > Open Project", "<cmd>Telescope neovim-project discover<CR>"),
                 dashboard.button("e",  "  > Open Folder", "<cmd>Oil<CR>"),
                 dashboard.button("l",  "󰒲  > Manage Plugins", "<cmd>Lazy<CR>"),
                 dashboard.button("q",  "  > Quit", "<cmd>qa<CR>"),

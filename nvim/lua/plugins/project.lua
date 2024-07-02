@@ -1,8 +1,17 @@
 return {
-    "ahmedkhalf/project.nvim",
+    "coffebar/neovim-project",
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+        "nvim-telescope/telescope.nvim",
+        "Shatur/neovim-session-manager",
+    },
     config = function()
-        require("project_nvim").setup {
-            patterns = { ".git", ".xcodeproject", "go.mod", "Makefile" }
+        require("neovim-project").setup {
+            projects = {
+                "~/Projects/*",
+                "~/.config/*",
+            },
+            dashboard_mode = true,
         }
     end
 }

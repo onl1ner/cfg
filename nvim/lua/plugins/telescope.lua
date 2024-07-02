@@ -27,9 +27,8 @@ return {
         vim.keymap.set("n", "<leader>fs", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", {})
         vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
         vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
-        vim.keymap.set("n", "<leader>fp", "<cmd>lua require('telescope').extensions.projects.projects{}<CR>", {})
+        vim.keymap.set("n", "<leader>fp", "<cmd>Telescope neovim-project history<CR>", {})
 
-        telescope.load_extension("projects")
         telescope.load_extension("live_grep_args")
     end,
 }
