@@ -1,6 +1,6 @@
-cp -R ~/.config/alacritty .
-cp -R ~/.config/nvim .
+cp -R -f ~/.config/alacritty .
+cp -R -f ~/.config/nvim .
 
-cp ~/.zshrc zsh/.zshrc
+mkdir -p zsh && cp -f ~/.zshrc zsh/.zshrc
 
-cp -R ~/.config/yabai . && cp -R ~/.config/skhd .
+cp -R -f ~/.config/yabai . && cp -R -f ~/.config/skhd .
