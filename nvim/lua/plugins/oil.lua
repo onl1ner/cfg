@@ -6,6 +6,9 @@ return {
             view_options = {
                 show_hidden = true,
             },
+            keymaps = {
+                ["<C-v>"] = { "actions.select", opts = { vertical = true }, desc = "Open the entry in a vertical split" },
+            },
         }
 
         vim.keymap.set("n", "<leader>e", "<cmd>Oil<cr>")
