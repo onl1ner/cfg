@@ -11,8 +11,8 @@ done
 
 mkdir -p ~/.config
 
-cp -R -f alacritty/ ~/.config/alacritty
-cp -R -f nvim/ ~/.config/nvim
+rm -rf ~/.config/alacritty && cp -R alacritty ~/.config
+rm -rf ~/.config/nvim && cp -R nvim ~/.config
 
 cp zsh/.zshrc ~/.zshrc
 
@@ -25,6 +25,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
         brew install xcbeautify xcode-build-server
     fi
 
-    rm -rf ~/.config/yabai ~/.config/skhd
-    cp -R yabai ~/.config && cp -R skhd ~/.config
+    rm -rf ~/.config/yabai && cp -R yabai ~/.config 
+    rm -rf ~/.config/skhd && cp -R skhd ~/.config
 fi
