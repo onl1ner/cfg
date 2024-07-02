@@ -1,3 +1,5 @@
+#!/bin/bash
+
 cp -R -f ~/.config/alacritty .
 cp -R -f ~/.config/nvim .
 
