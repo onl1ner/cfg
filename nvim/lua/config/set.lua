@@ -1,6 +1,9 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+vim.o.showtabline = 2
+vim.o.splitright = true
+
 vim.opt.wildmenu = true
 vim.opt.wildmode = "list:longest,list:full"
 
