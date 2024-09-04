@@ -15,6 +15,7 @@ rm -rf ~/.config/alacritty && cp -R alacritty ~/.config
 rm -rf ~/.config/nvim && cp -R nvim ~/.config
 
 cp zsh/.zshrc ~/.zshrc
+cp tmux/.tmux.conf ~/.tmux.conf
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     if [ "$NO_INSTALL" == false ]; then
@@ -28,3 +29,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     rm -rf ~/.config/yabai && cp -R yabai ~/.config 
     rm -rf ~/.config/skhd && cp -R skhd ~/.config
 fi
+
+if ! [[ -d ~/.tmux/plugins/tpm ]]; then
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
+
+tmux source ~/.tmux.conf
