@@ -27,4 +27,5 @@ yabai -m config window_shadow float
 
 # Excluded apps
 
+yabai -m rule --add app="^(Terminal|Alacritty)$" sub-layer=normal
 yabai -m rule --add app!="^(Terminal|Alacritty)$" manage=off
