@@ -24,6 +24,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 
         brew install nvim tmux lazygit
         brew install xcbeautify xcode-build-server
+
+        brew install fzf bat
     fi
 
     rm -rf ~/.config/yabai && cp -R yabai ~/.config 
