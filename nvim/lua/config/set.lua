@@ -23,8 +23,8 @@ vim.opt.expandtab = true
 vim.opt.wrap = false
 vim.opt.autoindent = true
 
-vim.opt.tw = 100
-vim.opt.colorcolumn = "100" 
+-- vim.opt.tw = 100
+-- vim.opt.colorcolumn = "100" 
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"

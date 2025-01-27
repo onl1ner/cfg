@@ -7,20 +7,19 @@ return {
     config = function()
         local dap = require("dap")
 
-        dap.adapters.godot = {
-            type = "server",
-            host = "127.0.0.1",
-            port = 6006,
-        }
-
-        dap.configurations.gdscript = {
-            {
-                type = "godot",
-                request = "launch",
-                name = "Launch scene",
-                project = "${workspaceFolder}",
-                launch_scene = true,
-            },
-        }
+        local xcodebuild = require("xcodebuild.integrations.dap")
+        local codelldbPath = vim.fn.expand("$HOME/.config/nvim/tools/codelldb-aarch64-darwin/extension/adapter/codelldb")
+        local lldbPath = "/Applications/Xcode-16.2.0.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB"
+     
+        xcodebuild.setup(codelldbPath)
+        dap.adapters.codelldb = xcodebuild.get_codelldb_adapter(codelldbPath, lldbPath)
+     
+        vim.keymap.set("n", "<leader>dd", xcodebuild.build_and_debug, { desc = "Build & Debug" })
+        vim.keymap.set("n", "<leader>dr", xcodebuild.debug_without_build, { desc = "Debug Without Building" })
+        vim.keymap.set("n", "<leader>dt", xcodebuild.debug_tests, { desc = "Debug Tests" })
+        vim.keymap.set("n", "<leader>dT", xcodebuild.debug_class_tests, { desc = "Debug Class Tests" })
+        vim.keymap.set("n", "<leader>b", xcodebuild.toggle_breakpoint, { desc = "Toggle Breakpoint" })
+        vim.keymap.set("n", "<leader>B", xcodebuild.toggle_message_breakpoint, { desc = "Toggle Message Breakpoint" })
+        vim.keymap.set("n", "<leader>dx", xcodebuild.terminate_session, { desc = "Terminate Debugger" })
     end
 }

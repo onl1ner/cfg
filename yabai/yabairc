@@ -16,7 +16,6 @@ yabai -m config window_gap 4
 # Mouse
 
 yabai -m config mouse_follows_focus on
-yabai -m config mouse_modifier command 
 yabai -m config mouse_action1 move
 yabai -m config mouse_action2 resize
 yabai mouse_drop_action swap

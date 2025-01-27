@@ -77,7 +77,7 @@ return {
             }
         }
 
-        lspconfig.tsserver.setup {
+        lspconfig['ts_ls'].setup {
             capabilities = capabilities,
             on_attach = on_attach,
         }
@@ -85,7 +85,7 @@ return {
         lspconfig.pyright.setup {
             capabilities = capabilities,
             on_attach = on_attach
-	}
+        }
 
         lspconfig.gdscript.setup{
             name = "godot",

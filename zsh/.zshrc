@@ -15,10 +15,7 @@ bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
 
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 alias ls="eza --icons=always --color=always --hyperlink --no-time --no-user --no-filesize --no-permissions"
 alias vim="nvim"
@@ -31,3 +28,8 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="$PATH:/usr/local/go/bin"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
