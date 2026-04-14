@@ -19,6 +19,9 @@ cp tmux/.tmux.conf ~/.tmux.conf
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     if [ "$NO_INSTALL" == false ]; then
+        brew install zsh-syntax-highlighting
+        brew install zsh-autosuggestions
+
         brew install koekeishiya/formulae/yabai
         brew install koekeishiya/formulae/skhd
 
